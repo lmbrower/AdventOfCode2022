@@ -22,4 +22,5 @@ int main() {
     }
     cout << "Max: " << max << endl;
     input.close();
+    return 0;
 }

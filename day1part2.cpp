@@ -37,4 +37,5 @@ int main() {
     sum = max + secondMax + thirdMax;
     cout << "Sum = " << sum << endl;
     input.close();
+    return 0;
 }
