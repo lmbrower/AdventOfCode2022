@@ -48,4 +48,5 @@ int main() {
         }
     }
     cout << "Score = " << score << endl;
+    return 0;
 }
