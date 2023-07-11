@@ -12,19 +12,29 @@ int main() {
     string line;
     int sum = 0;
     int num = 0;
+    bool found = false;
+    char one, two;
     while(getline(input, line)) {
         int half = line.length()/2;
+        found = false;
         for(int i = 0; i < half; i++) {
+            if(found) {
+                break;
+            }
             for(int j = half; j < line.length(); j++) {
-                if(line[i] = line[j] && isalpha(line[i])) { // found a match
-                    if(isupper(line[i])) {
-                        num = line[i];
+                one = line.at(i);
+                two = line.at(j);
+                if(one == two && isalpha(one)) { // found a match
+                    if(isupper(one)) {
+                        num = (int)one - 38;
                     }
                     else {
-                        num = line[i];
+                        num = (int)one - 96;
                     }
-                    cout << "Line[i] = " << line[i] << " || Line[j] = " << line[j] << endl;
+                    cout << "one = " << line.at(i) << " and gives num of " << num << endl;
                     sum += num;
+                    found = true;
+                    break;
                 }
             }
         }
