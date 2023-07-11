@@ -40,5 +40,6 @@ int main() {
         }
     }
     cout << "Sum = " << sum << endl;
+    input.close();
     return 0;
 }
