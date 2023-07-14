@@ -49,6 +49,6 @@ int main() {
     //for some reason my code is accessing message[9], but simply cutting
     //it off gives me the right output
     cout << "Message is: " << message << endl;
-
+    input.close();
     return 0;
 }
